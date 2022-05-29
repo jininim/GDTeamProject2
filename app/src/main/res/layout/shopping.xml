@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#F4F2F2">
+
+    <include
+        layout="@layout/toolbar1"
+        android:id="@+id/toolbar1"
+        />
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="전체 선택"
+            android:textSize="9pt"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:background="@color/white"
+            android:layout_height="35dp"
+            android:text="선택 삭제"
+            android:layout_marginLeft="200dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:textSize="9pt"
+            android:text="가게명" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="9pt"
+            android:text="가게명" />
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="주문 상품수" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="상품 금액" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="총 주문금액" />
+    </LinearLayout>
+
+
+
+    <Button
+        android:layout_marginTop="34dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="주문하기"
+        android:background="#00F86E"/>
+</LinearLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F2F2"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar2"
+        layout="@layout/toolbar2" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="650dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:background="@color/white"
+                android:text="+상품 더 담기"
+                android:textColor="#3358DC"
+                android:textSize="10pt" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="이용방법"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_marginTop="7dp"
+                android:textSize="9pt"
+                android:background="@color/white"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+
+                android:gravity="center">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="방문포장"
+                    android:textColor="@color/white"
+                    android:background="@drawable/solid"
+                    android:textSize="6pt"
+                    android:layout_marginRight="20dp"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="매장식사"
+                    android:textSize="6pt"
+                    android:textColor="@color/white"
+                    android:background="@drawable/solid" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="방문 손님"
+                android:textAlignment="center"
+                android:layout_marginTop="7dp"
+                android:textSize="9pt"
+                android:background="@color/white"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="제가 직접 가겠습니다 !"
+                android:layout_gravity="center"
+                android:textSize="7pt"
+                android:background="@color/white" />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="다른사람이 방문할거예요 !"
+                android:layout_gravity="center"
+                android:textSize="7pt"
+                android:background="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="이름을 입력해주세요"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="5dp"
+                android:textAlignment="center"
+                android:textSize="10pt"
+                android:background="@drawable/border4"
+                android:visibility="visible"
+                android:paddingBottom="5dp"/>
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="휴대폰 번호 입력"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="5dp"
+                android:textAlignment="center"
+                android:visibility="gone"
+                android:textSize="10pt"
+                android:background="@drawable/border4"
+                android:paddingBottom="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="vertical"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="요청 사항"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10pt"
+                    android:background="@color/white"/>
+                <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:hint="가게 사장님에게"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="5dp"
+                    android:textAlignment="center"
+                    android:textSize="10pt"
+                    android:background="@drawable/border3"
+                    android:paddingBottom="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="주문금액 : 0,000원"
+                    android:textSize="8pt"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="할인금액 : 0,000원"
+                    android:textSize="8pt"/>
+            </LinearLayout>
+
+            <TextView
+                android:padding="7dp"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="총 결제금액 : 0,000원"
+                android:textSize="9pt"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00F86E"
+        android:text="0,000원 결제하기" />
+</LinearLayout>

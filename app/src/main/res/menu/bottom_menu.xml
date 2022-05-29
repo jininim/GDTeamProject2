@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home"
+        android:title="홈"
+        android:enabled="true"
+        />
+
+    <item
+        android:id="@+id/location"
+        android:icon="@drawable/location"
+        android:title="내 주변 매장"
+        android:enabled="true" />
+
+    <item
+        android:id="@+id/shopping"
+        android:icon="@drawable/card"
+        android:title="카드 잔액 조회"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/my"
+        android:icon="@drawable/my"
+        android:title="마이페이지"
+        android:enabled="true"/>
+</menu>
