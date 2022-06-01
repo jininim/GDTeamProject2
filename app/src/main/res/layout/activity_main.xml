@@ -10,7 +10,7 @@
 
 
     <include
-        layout="@layout/toolbar"
+        layout="@layout/toolbar_base"
         android:id="@+id/toolbar" />
 
     <androidx.constraintlayout.widget.ConstraintLayout

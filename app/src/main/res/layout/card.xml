@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <include
-        layout="@layout/toolbar"
+        layout="@layout/toolbar_base"
         android:id="@+id/toolbar"/>
 
     <ImageView
