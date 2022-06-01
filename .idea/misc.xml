@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/GDTeamProject2/git_base/app/src/main/res/drawable/border.xml" value="0.2185" />
+=======
+>>>>>>> e1342ad7f145732aea9c92b78f9f02a17a793611
         <entry key="..\:/GDTeamProject2/git_base/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/lee/AndroidStudioProjects/GDTeamProject11/app/src/main/res/drawable/border.xml" value="0.1" />
         <entry key="..\:/Users/lee/AndroidStudioProjects/GDTeamProject11/app/src/main/res/layout/activity_main.xml" value="0.10277777777777777" />
