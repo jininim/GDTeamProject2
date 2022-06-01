@@ -1,107 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:background="@color/white">
+    tools:context=".MainActivity">
+
 
     <include
         layout="@layout/toolbar"
-        android:id="@+id/toolbar"/>
+        android:id="@+id/toolbar" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10pt"
-        android:layout_gravity="center"
-        android:src="@drawable/face"/>
-    <TextView
-        android:layout_marginTop="5pt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="사용자님 환영합니다 !"
-        android:layout_marginBottom="7dp"
-        android:textSize="8pt"
-        android:layout_gravity="center"
-        android:textAlignment="center"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="오늘은 어떤 음식을 구매하실건가요?"
-        android:layout_marginBottom="15dp"
-        android:textSize="8pt"
-        android:layout_gravity="center"
-        android:textAlignment="center"/>
-
-    <LinearLayout
-        android:layout_marginTop="33dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-        <ImageButton
-            android:layout_width="200dp"
-            android:layout_height="100dp"
-            android:text="내 주변 할인 매장"
-            android:src="@drawable/store2"
-            android:background="@color/white"
-            android:scaleType="fitCenter"/>
-    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
 
 
 
-    <LinearLayout
-        android:layout_marginTop="13dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/store"
-            android:layout_marginRight="40dp"
-            android:background="@color/white"
-            android:scaleType="fitCenter"
-            />
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/mart"
-            android:background="@color/white"
-            android:scaleType="fitCenter"
-            />
-    </LinearLayout>
+        <FrameLayout
+            android:id="@+id/frameMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="40dp">
-        <ImageView
-            android:layout_marginLeft="60dp"
-            android:layout_width="200dp"
-            android:layout_height="100dp"
-            android:src="@drawable/print1" />
+            <fragment
+                android:id="@+id/mainFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:name="com.example.gdteamproject11.mainFragment"
+                />
+        </FrameLayout>
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/print2"
-            android:layout_gravity="center_horizontal" />
-    </LinearLayout>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            app:itemBackground="@android:color/white"
+            app:labelVisibilityMode="labeled"
+            app:itemIconTint="@drawable/menu_selector_color"
+            app:itemTextColor="@drawable/menu_selector_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:menu="@menu/bottom_menu" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_gravity="start"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:id="@+id/bottomNavigationView"
-        app:itemBackground="@android:color/white"
-        app:labelVisibilityMode="labeled"
-        app:itemIconTint="@drawable/menu_selector_color"
-        app:itemTextColor="@drawable/menu_selector_color"
-        app:menu="@menu/bottom_menu"
-        />
-</LinearLayout>
+
+
