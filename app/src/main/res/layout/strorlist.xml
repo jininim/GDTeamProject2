@@ -41,14 +41,4 @@
         android:layout_height="550dp" />
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_gravity="start"
-        app:itemBackground="@android:color/white"
-        app:itemIconTint="@drawable/menu_selector_color"
-        app:itemTextColor="@drawable/menu_selector_color"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_menu" />
-</LinearLayout>
+  </LinearLayout>

@@ -17,7 +17,7 @@ public class mainFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_main, container,false);
-        setHasOptionsMenu(true);
+
         return viewGroup;
     }
 }
