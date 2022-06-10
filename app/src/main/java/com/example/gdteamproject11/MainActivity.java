@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     /*public void initNavigationBar(){
-        bt_navi.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        bt_navi.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectgit git gedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()){
