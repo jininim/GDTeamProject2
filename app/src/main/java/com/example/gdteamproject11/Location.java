@@ -1,12 +1,10 @@
 package com.example.gdteamproject11;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
-import android.view.LayoutInflater;
+import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -22,59 +20,54 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 
-public class LocationFragment extends Fragment {
+public class Location extends AppCompatActivity {
     EditText edit_location; //주소검색
-    TextView text_location;
-    Button btn_search;
+    TextView text_location; //결과 값
+    Button btn_search; //검색버튼
     XmlPullParser xpp;
-
-    String key="60c8ba80bc6543ce932cfb76cb872dc9";
     String data;
-
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_location, container, false);
-        edit_location =  (EditText) v.findViewById(R.id.edit_location);
-        text_location = (TextView) v.findViewById(R.id.result_location);
-        btn_search = (Button) v.findViewById(R.id.btn_search);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_location);
+        edit_location =  (EditText) findViewById(R.id.edit_location);
+        text_location = (TextView) findViewById(R.id.result_location);
+        btn_search = (Button) findViewById(R.id.btn_search);
         btn_search.setOnClickListener(View ->{
             new Thread(new Runnable() {
                 @Override
                 public void run() {
                     try {
-                        data= getXmlData();
+                        data=getXmlData();
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                text_location.setText(data);
+                            }
+                        });
                     } catch (XmlPullParserException e) {
                         e.printStackTrace();
                     }
 
-                    runOnUiThread(new Runnable() { //오류수정해야함
-                        @Override
-                        public void run() {
-                            text_location.setText(data);
-                        }
-                    });
+
                 }
             }).start();
         });
-        return v;
     }
-
-
-    private String getXmlData() throws XmlPullParserException {
+    String getXmlData() throws XmlPullParserException {
         StringBuffer buffer=new StringBuffer();
         String str= edit_location.getText().toString();//EditText에 작성된 Text얻어오기
         String location = URLEncoder.encode(str);
-        String queryUrl = " https://openapi.gg.go.kr/GDreamCard?KEY=60c8ba80bc6543ce932cfb76cb872dc9&SIGUN_NM="+location +"pIndex=1&pSize=100&";
+        //파싱 url
+        String queryUrl = " https://openapi.gg.go.kr/GDreamCard?KEY=60c8ba80bc6543ce932cfb76cb872dc9&pIndex=1&pSize=100&SIGUN_CD=41190";
+        Log.d("giiiiiiiiiiiiiiiiiiii",queryUrl);
         try{
             URL url= new URL(queryUrl);//문자열로 된 요청 url을 URL 객체로 생성.
             InputStream is= url.openStream(); //url위치로 입력스트림 연결
             XmlPullParserFactory factory= XmlPullParserFactory.newInstance();//xml파싱을 위한
-        XmlPullParser xpp= factory.newPullParser();
-        xpp.setInput( new InputStreamReader(is, "UTF-8") ); //inputstream 으로부터 xml 입력받기
-        String tag;
+            XmlPullParser xpp= factory.newPullParser();
+            xpp.setInput( new InputStreamReader(is, "UTF-8") ); //inputstream 으로부터 xml 입력받기
+            String tag;
             xpp.next();
             int eventType= xpp.getEventType();
             while( eventType != XmlPullParser.END_DOCUMENT ){

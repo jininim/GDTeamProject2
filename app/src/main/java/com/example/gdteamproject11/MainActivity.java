@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     cardFragment fragmentcard ;
     mainFragment fragmentmain;
     mypageFragment fragmentmypage;
-    LocationFragment fragmentLocation;
     BottomNavigationView bt_navi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentcard = new cardFragment();
         fragmentmain = new mainFragment();
         fragmentmypage = new mypageFragment();
-        fragmentLocation = new LocationFragment();
+
         bt_navi = findViewById(R.id.bottomNavigationView);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container,fragmentmain).commit();
@@ -46,8 +46,10 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.my:
                         getSupportFragmentManager().beginTransaction().replace(R.id.container,fragmentmypage).commit();
                         return true;
+                        //인텐트사용 , 메인 스레드 사용위함. 프래그먼트에서는 실행안됌.
                    case R.id.location:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.container,fragmentLocation).commit();
+                       Intent intent = new Intent(getApplicationContext(),Location.class);
+                       startActivity(intent);
                 }
                 return false;
             }
