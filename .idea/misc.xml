@@ -21,7 +21,7 @@
         <entry key="..\:/Users/haksu/AndroidStudioProjects/GDTeamProject2/app/src/main/res/layout/toolbar_basket.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/haksu/AndroidStudioProjects/GDTeamProject2/app/src/main/res/layout/toolbar_order.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/haksu/AndroidStudioProjects/GDTeamProject2/app/src/main/res/menu/bottom_menu.xml" value="0.1" />
-        <entry key="..\:/Users/lee/Documents/GitHub/GDTeamProject2/app/src/main/res/layout/activity_location.xml" value="0.1" />
+        <entry key="..\:/Users/lee/Documents/GitHub/GDTeamProject2/app/src/main/res/layout/activity_location.xml" value="0.22" />
         <entry key="..\:/Users/lee/Documents/GitHub/GDTeamProject2/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Users/lee/Documents/GitHub/GDTeamProject2/app/src/main/res/layout/card.xml" value="0.18" />
         <entry key="..\:/Users/lee/Documents/GitHub/GDTeamProject2/app/src/main/res/layout/fragment_card.xml" value="0.14948453608247422" />
@@ -36,6 +36,7 @@
         <entry key="..\:/Users/lee/Documents/GitHub/GDTeamProject2/app/src/main/res/layout/register.xml" value="0.21" />
         <entry key="..\:/Users/lee/Documents/GitHub/GDTeamProject2/app/src/main/res/layout/shopping.xml" value="0.19791666666666666" />
         <entry key="..\:/Users/lee/Documents/GitHub/GDTeamProject2/app/src/main/res/layout/strorlist.xml" value="0.1" />
+        <entry key="..\:/Users/lee/Documents/GitHub/GDTeamProject2/app/src/main/res/layout/test.xml" value="0.31521739130434784" />
       </map>
     </option>
   </component>
