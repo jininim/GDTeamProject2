@@ -25,11 +25,11 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="15dp"
         android:weightSum="10">
         <Button
             android:id="@+id/yesBtn"
-            android:text="확인.. : ("
+            android:text="확인"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/border2"

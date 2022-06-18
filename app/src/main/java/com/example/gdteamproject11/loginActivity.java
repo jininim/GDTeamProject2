@@ -59,6 +59,7 @@ private FirebaseAuth firebaseAuth;
                                 if(task.isSuccessful()){
                                     startActivity(new Intent(loginActivity.this, MainActivity.class));
                                     mDialog.dismiss();
+                                    finish();
                                 } else{
                                     Toast.makeText(loginActivity.this, "아이디 또는 비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show();
                                     mDialog.dismiss();
