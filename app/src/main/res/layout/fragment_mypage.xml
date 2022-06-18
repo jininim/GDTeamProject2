@@ -75,18 +75,26 @@
             android:textSize="9pt"/>
     </LinearLayout>
 
-
+    <Button
+        android:id="@+id/adminBtn"
+        android:layout_marginTop="10dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="매장 및 상품등록"
+        android:visibility="gone"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="200dp">
+        android:layout_marginTop="230dp">
         <ImageView
 
             android:layout_marginLeft="60dp"
             android:layout_width="200dp"
-            android:layout_height="100dp"
+            android:layout_height="150dp"
             android:src="@drawable/print1" />
 
         <ImageView

@@ -25,7 +25,14 @@
             android:id="@+id/btn_search"
             android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:text="search"
+            android:text="데베 입력"
+            android:textSize="12sp"
+            />
+        <Button
+            android:id="@+id/btn_result"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="데베 조회"
             android:textSize="12sp"
             />
 
