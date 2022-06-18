@@ -21,6 +21,10 @@
         <entry key="..\:/Users/haksu/AndroidStudioProjects/GDTeamProject2/app/src/main/res/layout/toolbar_basket.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/haksu/AndroidStudioProjects/GDTeamProject2/app/src/main/res/layout/toolbar_order.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/haksu/AndroidStudioProjects/GDTeamProject2/app/src/main/res/menu/bottom_menu.xml" value="0.1" />
+        <entry key="..\:/Users/khv97/AndroidStudioProjects/GDTeamProject2/app/src/main/res/layout/activity_location.xml" value="0.1" />
+        <entry key="..\:/Users/khv97/AndroidStudioProjects/GDTeamProject2/app/src/main/res/layout/gmap.xml" value="0.10960144927536232" />
+        <entry key="..\:/Users/khv97/AndroidStudioProjects/GDTeamProject2/app/src/main/res/layout/map.xml" value="0.1" />
+        <entry key="..\:/Users/khv97/AndroidStudioProjects/GDTeamProject2/app/src/main/res/layout/shopping.xml" value="0.1" />
         <entry key="..\:/Users/lee/Documents/GitHub/GDTeamProject2/app/src/main/res/layout/activity_location.xml" value="0.22" />
         <entry key="..\:/Users/lee/Documents/GitHub/GDTeamProject2/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Users/lee/Documents/GitHub/GDTeamProject2/app/src/main/res/layout/card.xml" value="0.18" />
@@ -40,7 +44,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
