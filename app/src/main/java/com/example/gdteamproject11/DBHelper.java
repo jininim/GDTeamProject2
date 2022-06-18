@@ -55,7 +55,7 @@ public class DBHelper extends SQLiteOpenHelper {
                     + "\n"
                     + "지번주소 : "
                     + cursor.getString(4)
-                    + "\n";
+                    + "\n"+ "\n"+ "\n"+ "\n";
         }
        return result;
 

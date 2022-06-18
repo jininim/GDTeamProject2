@@ -20,6 +20,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserInfo;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -55,8 +56,8 @@ public class RegisterActivity extends AppCompatActivity {
                 String strPwdCheck = mUserPwdCheck.getText().toString().trim();
                 String strPhone = mUserPhone.getText().toString().trim();
 
+
                 if(strPwd.equals(strPwdCheck)){
-                    Log.d(TAG,"등록 버튼" + "Email : " + strEmail + ", Pwd : " + strPwd + ", PwdCheck : "+ strPwdCheck);
                     final ProgressDialog mDialog = new ProgressDialog(RegisterActivity.this);
                     mDialog.setMessage("가입중입니다...");
                     mDialog.show();
@@ -85,7 +86,6 @@ public class RegisterActivity extends AppCompatActivity {
                                         FirebaseDatabase database = FirebaseDatabase.getInstance();
                                         DatabaseReference reference = database.getReference("Users");
                                         reference.child(uid).setValue(hashMap);
-
                                         //가입 성공시 로그인 페이지로
                                         startActivity(new Intent(RegisterActivity.this, loginActivity.class));
                                         finish();

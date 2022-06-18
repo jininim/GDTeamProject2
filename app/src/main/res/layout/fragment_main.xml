@@ -12,15 +12,16 @@
         android:layout_marginTop="10pt"
         android:layout_gravity="center"
         android:src="@drawable/face"/>
+
     <TextView
-        android:layout_marginTop="5pt"
+        android:id="@+id/tvUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="사용자님 환영합니다 !"
-        android:layout_marginBottom="7dp"
-        android:textSize="8pt"
         android:layout_gravity="center"
-        android:textAlignment="center"/>
+        android:layout_marginTop="5pt"
+        android:layout_marginBottom="7dp"
+        android:textAlignment="center"
+        android:textSize="8pt" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

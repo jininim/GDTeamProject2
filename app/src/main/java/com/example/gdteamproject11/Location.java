@@ -38,20 +38,20 @@ public class Location extends AppCompatActivity {
         btn_result = findViewById(R.id.btn_result);
         dbHelper = new DBHelper(this,1);
         btn_search.setOnClickListener(View ->{
-            new Thread(() -> {
-                try {
-                    //xml 파싱 -> 데이터 베이스 insert
-                    getXmlData();
-                    runOnUiThread(() -> {
 
+//            new Thread(() -> {
+//                try {
+//                    //xml 파싱 -> 데이터 베이스 insert
+//                    getXmlData();
+//                    runOnUiThread(() -> {
+//
+//
+//                    });
+//                } catch (XmlPullParserException e) {
+//                    e.printStackTrace();
+//                }
+//            }).start();
 
-                    });
-                } catch (XmlPullParserException e) {
-                    e.printStackTrace();
-                }
-
-
-            }).start();
 
         });
         btn_result.setOnClickListener(view ->{

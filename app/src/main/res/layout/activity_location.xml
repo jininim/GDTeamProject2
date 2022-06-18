@@ -17,22 +17,22 @@
 
         <EditText
             android:id="@+id/edit_location"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:hint="enter text to search"/>
+            android:hint="위치를 입력해주세요"/>
 
         <Button
             android:id="@+id/btn_search"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="데베 입력"
+            android:text="지도"
             android:textSize="12sp"
             />
         <Button
             android:id="@+id/btn_result"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="데베 조회"
+            android:text="조회"
             android:textSize="12sp"
             />
 

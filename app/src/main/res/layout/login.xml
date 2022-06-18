@@ -87,31 +87,36 @@
         android:layout_width="300dp"
         android:layout_height="30dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="100dp"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:text="아이디 찾기"
             android:textAlignment="center"
+            android:gravity="center"
+            android:background="@drawable/border"
             android:textSize="7pt" />
 
         <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
             android:layout_weight="1"
             android:text="비밀번호 찾기"
-            android:background="@drawable/border2"
+            android:gravity="center"
+            android:background="@drawable/border"
             android:textAlignment="center"
             android:textSize="7pt" />
 
         <TextView
             android:id="@+id/tvRegister"
             android:layout_width="100dp"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:layout_weight="1"
             android:textAlignment="center"
+            android:gravity="center"
+            android:background="@drawable/border"
             android:text="회원가입"
             android:textSize="7pt" />
 
