@@ -20,6 +20,9 @@
         android:theme="@style/Theme.GDTeamProject11"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".AddStore"
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -40,6 +43,8 @@
         <activity android:name=".loginActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MapsActivity" />
+        <activity android:name=".AddMaps" />
+
     </application>
 
 </manifest>

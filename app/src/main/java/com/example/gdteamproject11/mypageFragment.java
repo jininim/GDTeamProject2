@@ -55,6 +55,13 @@ public class mypageFragment extends Fragment {
         /** 현재 로그인된 모듈 담기 **/
         mFirebaseAuth = FirebaseAuth.getInstance();
 
+        adminBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), AddMaps.class));
+            }
+        });
+
         /** 로그아웃 버튼이벤트 **/
         tvSignOut.setOnClickListener(new View.OnClickListener() {
             @Override
