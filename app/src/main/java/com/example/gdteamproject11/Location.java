@@ -3,8 +3,6 @@ package com.example.gdteamproject11;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -38,6 +36,7 @@ public class Location extends AppCompatActivity {
         btn_result = findViewById(R.id.btn_result);
         dbHelper = new DBHelper(this,1);
         btn_search.setOnClickListener(View ->{
+
             new Thread(() -> {
                 try {
                     //xml 파싱 -> 데이터 베이스 insert
@@ -49,18 +48,16 @@ public class Location extends AppCompatActivity {
                 } catch (XmlPullParserException e) {
                     e.printStackTrace();
                 }
-
-
             }).start();
+
 
         });
         btn_result.setOnClickListener(view ->{
-            //데이터베이스 조회 getResult안에 editText통해서 쿼리 조건.
-            text_location.setText(dbHelper.getResult(edit_location.getText().toString()));
+            text_location.setText(dbHelper.getResult());
         });
 
     }
-    void getXmlData() throws XmlPullParserException {
+    String getXmlData() throws XmlPullParserException {
         StringBuffer buffer=new StringBuffer();
         String arr[] = new String[5];
         String str= edit_location.getText().toString();//EditText에 작성된 Text얻어오기
@@ -84,39 +81,52 @@ public class Location extends AppCompatActivity {
 
                     case XmlPullParser.START_TAG:
                         tag= xpp.getName();//테그 이름 얻어오기
-                            if (tag.equals("SIGUN_NM")) {
+                        if (tag.equals("SIGUN_NM")) {
 //                                buffer.append("주소 : ");
-                                xpp.next();
-                                buffer.append(xpp.getText());//title 요소의 TEXT 읽어와서 문자열버퍼에 추가
-                                arr[0]=(xpp.getText());
-                                buffer.append("\n"); //줄바꿈 문자 추가
-                            } else if (tag.equals("FACLT_NM")) {
+                            xpp.next();
+                            buffer.append(xpp.getText());//title 요소의 TEXT 읽어와서 문자열버퍼에 추가
+                            arr[0]=(xpp.getText());
+                            buffer.append("\n"); //줄바꿈 문자 추가
+                        } else if (tag.equals("FACLT_NM")) {
 //                                buffer.append("가맹점 명 : ");
-                                xpp.next();
-                                buffer.append(xpp.getText());//FACLT_NM 요소의 TEXT 읽어와서 문자열버퍼에 추가
-                                arr[1]=(xpp.getText());
-                                buffer.append("\n");//줄바꿈 문자 추가
-                            } else if (tag.equals("DIV_NM")) {
+                            xpp.next();
+                            buffer.append(xpp.getText());//FACLT_NM 요소의 TEXT 읽어와서 문자열버퍼에 추가
+                            arr[1]=(xpp.getText());
+                            buffer.append("\n");//줄바꿈 문자 추가
+                        } else if (tag.equals("DIV_NM")) {
 //                                buffer.append("구분 :");
-                                xpp.next();
-
-                                buffer.append(xpp.getText());//DIV_NM 요소의 TEXT 읽어와서 문자열버퍼에 추가
-                                arr[2]=(xpp.getText());
-                                buffer.append("\n");//줄바꿈 문자 추가
-                            } else if (tag.equals("REFINE_ROADNM_ADDR")) {
-//                                buffer.append("도로명 주소 :");
-                                xpp.next();
-                                buffer.append(xpp.getText());//REFINE_ROADNM_ADDR 요소의 TEXT 읽어와서 문자열버퍼에 추가
-                                arr[3]=(xpp.getText());
-                                buffer.append("\n");//줄바꿈 문자 추가
-                            } else if (tag.equals("REFINE_LOTNO_ADDR")) {
-//                                buffer.append("지번 주소:");
-                                xpp.next();
-                                buffer.append(xpp.getText());//REFINE_LOTNO_ADDR 요소의 TEXT 읽어와서 문자열버퍼에 추가
-                                arr[4]=(xpp.getText());
+                            xpp.next();
+                            buffer.append(xpp.getText());//DIV_NM 요소의 TEXT 읽어와서 문자열버퍼에 추가
+                            arr[2]=(xpp.getText());
+                            buffer.append("\n");//줄바꿈 문자 추가
+                        }
+                        else if (tag.equals("REFINE_LOTNO_ADDR")) {
+//                                buffer.append("구분 :");
+                            xpp.next();
+                        }
+                        else if (tag.equals("REFINE_ROADNM_ADDR")) {
+//                                buffer.append("구분 :");
+                            xpp.next();
+                        }
+                        else if (tag.equals("REFINE_ZIP_CD")) {
+//                                buffer.append("구분 :");
+                            xpp.next();
+                        }else if (tag.equals("REFINE_WGS84_LOGT")) {
+//                                buffer.append("경도 주소 :");
+                            xpp.next();
+                            buffer.append(xpp.getText());//REFINE_ROADNM_ADDR 요소의 TEXT 읽어와서 문자열버퍼에 추가
+                            arr[3]=(xpp.getText());
+                            buffer.append("\n");//줄바꿈 문자 추가
+                        } else if (tag.equals("REFINE_WGS84_LAT")) {
+//                                buffer.append("위도 주소:");
+                            xpp.next();
+                            buffer.append(xpp.getText());//REFINE_LOTNO_ADDR 요소의 TEXT 읽어와서 문자열버퍼에 추가
+                            arr[4]=(xpp.getText());
+                            if (arr[4] != null){
                                 dbHelper.insert(arr[0],arr[1],arr[2],arr[3],arr[4]); //데이터베이스 데이터 추가.
-                                buffer.append("\n");//줄바꿈 문자 추가
                             }
+                            buffer.append("\n");//줄바꿈 문자 추가
+                        }
 
                         break;
                     case XmlPullParser.TEXT:
@@ -137,6 +147,6 @@ public class Location extends AppCompatActivity {
             e.printStackTrace();
         }
         buffer.append("파싱 끝\n");
-//        return buffer.toString();//StringBuffer 문자열 객체 반환
+        return buffer.toString();//StringBuffer 문자열 객체 반환
     }
 }

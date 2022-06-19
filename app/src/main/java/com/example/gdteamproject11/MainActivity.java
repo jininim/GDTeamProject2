@@ -98,9 +98,9 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     //인텐트사용 , 메인 스레드 사용위함. 프래그먼트에서는 실행안됌.
                     case R.id.location:
-                        Intent intent = new Intent(getApplicationContext(), googleMap.class);
-                        //Intent intent = new Intent(getApplicationContext(),Location.class);
-                        startActivity(intent);
+                        Intent intent2 = new Intent(getApplicationContext(),MapsActivity.class);
+                        startActivity(intent2);
+                        return true;
                 }
                 return false;
             }
