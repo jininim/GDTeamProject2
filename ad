@@ -1,0 +1,183 @@
+[33mcommit 2165a7950777966b3bf041c14464a709fbb51d06[m[33m ([m[1;36mHEAD -> [m[1;32mjin4[m[33m, [m[1;31morigin/jin4[m[33m)[m
+Author: developer Jin <91578450+jininim@users.noreply.github.com>
+Date:   Sun Jun 19 17:42:08 2022 +0900
+
+    last
+
+[33mcommit 2ebe6b42fab6dbef60c83a8b1a979a74fd37c9e7[m[33m ([m[1;31morigin/jin3[m[33m)[m
+Author: DESKTOP-QMOOLU8\haksu <haksunlee456@naver.com>
+Date:   Sun Jun 19 13:10:38 2022 +0900
+
+    마커 타이틀 스니펫추가
+
+[33mcommit 01204ef5fd6f4d6937b452e1346bdeda0a6e7a11[m
+Author: DESKTOP-QMOOLU8\haksu <haksunlee456@naver.com>
+Date:   Sun Jun 19 01:51:36 2022 +0900
+
+    마커 추가 완료
+
+[33mcommit 4110a6ab3a9f424fa9f9e5051cbda2fdf69754df[m[33m ([m[1;31morigin/jin2[m[33m)[m
+Merge: 9225a8b d05cee5
+Author: developer Jin <91578450+jininim@users.noreply.github.com>
+Date:   Sat Jun 18 20:58:55 2022 +0900
+
+    씨발
+
+[33mcommit d05cee5a08ad9bbdb8f8ca5239950566db2e2c46[m
+Author: heondong9265 <106370941+heondong9265@users.noreply.github.com>
+Date:   Sat Jun 18 16:25:09 2022 +0900
+
+    Delete git_base directory
+
+[33mcommit 34bbea5a1be208a00e9ee49e20fe6043f9047e1f[m
+Author: heondong9265 <heondong0723@gmail.com>
+Date:   Sat Jun 18 15:52:16 2022 +0900
+
+    login
+
+[33mcommit e884378a9911a97390565a4abf9a97d1aede48fa[m
+Author: heondong9265 <heondong0723@gmail.com>
+Date:   Sat Jun 18 15:45:30 2022 +0900
+
+    login
+
+[33mcommit 8300cbf9e49be3632a37a4471988119d9885fbb6[m
+Author: heondong9265 <heondong0723@gmail.com>
+Date:   Sat Jun 18 15:44:10 2022 +0900
+
+    login
+
+[33mcommit f6487b2368fb3b5ab900094043792ef71c4ec7a5[m
+Author: heondong9265 <heondong0723@gmail.com>
+Date:   Sat Jun 18 15:43:14 2022 +0900
+
+    login
+
+[33mcommit ceb399381d10cf1d288439891eb34e5fb57451ca[m
+Author: heondong9265 <heondong0723@gmail.com>
+Date:   Sat Jun 18 15:39:09 2022 +0900
+
+    로그인쪽 구현
+
+[33mcommit 9225a8b23c7c0b1f7e150964dd1d440cba596c33[m[33m ([m[1;31morigin/jin1[m[33m)[m
+Author: developer Jin <91578450+jininim@users.noreply.github.com>
+Date:   Sat Jun 18 01:18:24 2022 +0900
+
+    데베 연결 조회 기능 추가
+
+[33mcommit d6b465986dab19411ada541e3e6fd6d85759c862[m
+Merge: c34f725 5a0e3c1
+Author: heondong9265 <106370941+heondong9265@users.noreply.github.com>
+Date:   Fri Jun 17 15:57:07 2022 +0900
+
+    Merge branch 'heon' of https://github.com/jininim/GDTeamProject2 into heon_base
+
+[33mcommit c34f725fb0eacb847b98db2fcb86c04dfcb6d021[m
+Merge: 8e29ccb ada68ec
+Author: heondong9265 <106370941+heondong9265@users.noreply.github.com>
+Date:   Fri Jun 17 15:57:02 2022 +0900
+
+    base
+
+[33mcommit ada68ecf34d884150e5df78c94efd1b58d0e6170[m
+Author: developer Jin <91578450+jininim@users.noreply.github.com>
+Date:   Sat Jun 11 22:48:42 2022 +0900
+
+    location 추가 , card프래그먼트 기능 구현 , firebase추가
+
+[33mcommit 54a11d678ce857562b8a9efbb0d3a2c769cb4122[m
+Author: developer Jin <91578450+jininim@users.noreply.github.com>
+Date:   Sat Jun 11 21:51:13 2022 +0900
+
+    위치표시중
+
+[33mcommit 2bf980528b2b7bcafe6b3fa537babf04c6d1efe7[m
+Author: developer Jin <91578450+jininim@users.noreply.github.com>
+Date:   Sat Jun 11 19:38:10 2022 +0900
+
+    "카드잔액조회 버튼 추가 파이어베이스 추가"
+
+[33mcommit 8e29ccb0e9cc85b747569028ad95403fe2d509f0[m
+Author: heondong9265 <106370941+heondong9265@users.noreply.github.com>
+Date:   Fri Jun 10 14:27:11 2022 +0900
+
+    login
+
+[33mcommit fa4cf2f8888f048bd4bd50034d6e5b03eeb89cf0[m
+Author: heondong9265 <106370941+heondong9265@users.noreply.github.com>
+Date:   Mon Jun 6 16:50:53 2022 +0900
+
+    kakaoLogin
+
+[33mcommit aeac3f22d1794e37c2a913ed58b2de0d0696edf0[m
+Author: DESKTOP-QMOOLU8\haksu <haksunlee456@naver.com>
+Date:   Sat Jun 4 00:34:45 2022 +0900
+
+    바텀네비 + 프래그먼트 연결
+
+[33mcommit 6f179b254344165a277590059834e8ff3442303c[m
+Author: DESKTOP-QMOOLU8\haksu <haksunlee456@naver.com>
+Date:   Fri Jun 3 16:40:34 2022 +0900
+
+    바텀네비 + 프래그먼트 연결
+
+[33mcommit e6cef88f3eb3c368ce54d0637bf8baa5d4fcfebf[m
+Merge: 7670ef4 e1342ad
+Author: heondong9265 <heondong0723@gmail.com>
+Date:   Wed Jun 1 17:07:02 2022 +0900
+
+    Edit -> framgent, bottomNV, toolbar
+
+[33mcommit 7670ef4e525d85827280cf00cd04171d7f89f090[m
+Author: heondong9265 <heondong0723@gmail.com>
+Date:   Wed Jun 1 17:04:24 2022 +0900
+
+    Edit -> mainFragment, toolbar, bottomNavigation
+
+[33mcommit e1342ad7f145732aea9c92b78f9f02a17a793611[m
+Author: heondong9265 <106370941+heondong9265@users.noreply.github.com>
+Date:   Wed Jun 1 17:01:06 2022 +0900
+
+    Delete f3.txt
+
+[33mcommit 7b22e124df555d0f08188b1aebd9de81df24e4ba[m
+Author: heondong9265 <106370941+heondong9265@users.noreply.github.com>
+Date:   Wed Jun 1 17:00:51 2022 +0900
+
+    Delete f1.txt
+
+[33mcommit a2db0f93898556126c6c4ecbd850fc3af7015bd0[m
+Author: heondong9265 <heondong0723@gmail.com>
+Date:   Wed Jun 1 17:00:01 2022 +0900
+
+    Edit -> mainFragment, toolbar, bottom
+
+[33mcommit 9d9432c6f9c963696bc3ffc1207ff3dc7510bcce[m
+Author: heondong9265 <heondong0723@gmail.com>
+Date:   Wed Jun 1 16:39:44 2022 +0900
+
+    fragment, xml base
+
+[33mcommit 5aa836de039f6440eadf8e856764237a92599371[m
+Author: heondong9265 <heondong0723@gmail.com>
+Date:   Mon May 30 00:26:20 2022 +0900
+
+    test123
+
+[33mcommit 5a0e3c1752b94492f0d5409cefc3bd103f28d4a2[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: heondong9265 <106370941+heondong9265@users.noreply.github.com>
+Date:   Mon May 30 00:13:47 2022 +0900
+
+    Delete f1.txt
+
+[33mcommit 8fb341506e51158bee36445f051a6170b87ba3b6[m
+Author: heondong9265 <heondong0723@gmail.com>
+Date:   Mon May 30 00:13:02 2022 +0900
+
+    test
+
+[33mcommit 39e92f4233adde045489d67c5493c50d054fee00[m[33m ([m[1;31morigin/Hyunbin[m[33m)[m
+Author: developer Jin <91578450+jininim@users.noreply.github.com>
+Date:   Sun May 29 23:16:36 2022 +0900
+
+    first
