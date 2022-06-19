@@ -13,11 +13,6 @@
         android:icon="@drawable/location"
         android:title="내 주변 매장"
         android:enabled="true" />
-    <item
-        android:id="@+id/location_map"
-        android:icon="@android:drawable/ic_dialog_map"
-        android:title="내 주변 매장 지도"
-        android:enabled="true" />
 
     <item
         android:id="@+id/shopping"

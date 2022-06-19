@@ -28,6 +28,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL("DROP TABLE Gdream");
+        sqLiteDatabase.close();
     }
     //Table 데이터 입력
     public void insert(String SIGUN_NM,String FACLT_NM,String DIV_NM,String REFINE_ROADNM_ADDR,String REFINE_LOTNO_ADDR) {

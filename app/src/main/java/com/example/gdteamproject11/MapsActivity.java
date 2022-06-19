@@ -22,6 +22,16 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+import org.xmlpull.v1.XmlPullParserFactory;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
     DBHelper dbHelper;
@@ -46,11 +56,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onMapReady(GoogleMap googleMap) {
         // 구글 맵 객체를 불러온다.
         mMap = googleMap;
+
         //데이터 베이스 연결 getReadableDatabase
         sqlDB = dbHelper.getReadableDatabase();
 
         Cursor cursor = sqlDB.rawQuery("SELECT * FROM Gdream;", null);
-
         while (cursor.moveToNext()) {
 
             runOnUiThread(new Runnable() { //runOnUiThread 메인 스레드에서 실행.
@@ -75,4 +85,5 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         googleMap.moveCamera(CameraUpdateFactory.zoomTo(16));
     }
+
 }

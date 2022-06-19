@@ -36,26 +36,14 @@ public class Location extends AppCompatActivity {
         btn_result = findViewById(R.id.btn_result);
         dbHelper = new DBHelper(this,1);
         btn_search.setOnClickListener(View ->{
-            new Thread(() -> {
-                try {
-                    //xml 파싱 -> 데이터 베이스 insert
-                    getXmlData();
-                    runOnUiThread(() -> {
 
-
-                    });
-                } catch (XmlPullParserException e) {
-                    e.printStackTrace();
-                }
-            }).start();
         });
         btn_result.setOnClickListener(view ->{
             text_location.setText(dbHelper.getResult());
         });
 
     }
-    String getXmlData() throws XmlPullParserException {
-        StringBuffer buffer=new StringBuffer();
+    void getXmlData() throws XmlPullParserException {
         String arr[] = new String[5];
         //파싱 url
         String queryUrl = "https://openapi.gg.go.kr/GDreamCard?KEY=60c8ba80bc6543ce932cfb76cb872dc9&pIndex=10&pSize=1000&";
@@ -71,55 +59,47 @@ public class Location extends AppCompatActivity {
             while( eventType != XmlPullParser.END_DOCUMENT ){
                 switch( eventType ){
                     case XmlPullParser.START_DOCUMENT:
-                        buffer.append("파싱 시작...\n\n");
                         break;
 
                     case XmlPullParser.START_TAG:
                         tag= xpp.getName();//테그 이름 얻어오기
                         if (tag.equals("SIGUN_NM")) { //xml 태그의 값이 SIGUN_NM일경우 실행.
                             xpp.next();
-                            buffer.append(xpp.getText());
                             arr[0]=(xpp.getText());
-                            buffer.append("\n"); //줄바꿈 문자 추가
                         } else if (tag.equals("FACLT_NM")) { // 가맹점명
 //
                             xpp.next();
-                            buffer.append(xpp.getText());//FACLT_NM 요소의 TEXT 읽어와서 문자열버퍼에 추가
                             arr[1]=(xpp.getText());//FACLT_NM 요소의 TEXT 읽어와서 배열에 추가
-                            buffer.append("\n");//줄바꿈 문자 추가
                         } else if (tag.equals("DIV_NM")) {
-//                                buffer.append("구분 :");
+//
                             xpp.next();
-                            buffer.append(xpp.getText());//DIV_NM 요소의 TEXT 읽어와서 문자열버퍼에 추가
+
                             arr[2]=(xpp.getText());//DIV_NM 요소의 TEXT 읽어와서 배열에 추가
-                            buffer.append("\n");//줄바꿈 문자 추가
                         }
                         else if (tag.equals("REFINE_LOTNO_ADDR")) {
-//                                buffer.append("구분 :");
+//
                             xpp.next();
                         }
                         else if (tag.equals("REFINE_ROADNM_ADDR")) {
-//                                buffer.append("구분 :");
+//
                             xpp.next();
                         }
                         else if (tag.equals("REFINE_ZIP_CD")) {
-//                                buffer.append("구분 :");
+//
                             xpp.next();
                         }else if (tag.equals("REFINE_WGS84_LOGT")) { // 경도
-//                                buffer.append("경도 주소 :");
+//
                             xpp.next();
-                            buffer.append(xpp.getText());//REFINE_ROADNM_ADDR 요소의 TEXT 읽어와서 문자열버퍼에 추가
                             arr[3]=(xpp.getText());//REFINE_WGS84_LOGT 요소의 TEXT 읽어와서 배열에 추가
-                            buffer.append("\n");//줄바꿈 문자 추가
+
                         } else if (tag.equals("REFINE_WGS84_LAT")) { // 위도
-//                                buffer.append("위도 주소:");
+//
                             xpp.next();
-                            buffer.append(xpp.getText());//REFINE_LOTNO_ADDR 요소의 TEXT 읽어와서 문자열버퍼에 추가
                             arr[4]=(xpp.getText());//REFINE_WGS84_LAT 요소의 TEXT 읽어와서 배열에 추가
-                            if (arr[4] != null){
+                            if (arr[4] != null){ //
                                 dbHelper.insert(arr[0],arr[1],arr[2],arr[3],arr[4]); //데이터베이스 데이터 추가.
                             }
-                            buffer.append("\n");//줄바꿈 문자 추가
+
                         }
 
                         break;
@@ -128,8 +108,7 @@ public class Location extends AppCompatActivity {
 
                     case XmlPullParser.END_TAG:
                         tag= xpp.getName(); //테그 이름 얻어오기
-
-                        if(tag.equals("row")) buffer.append("\n");// 첫번째 검색결과종료..줄바꿈
+                        if(tag.equals("row"))
                         break;
                 }
                 eventType= xpp.next();
@@ -140,7 +119,6 @@ public class Location extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        buffer.append("파싱 끝\n");
-       return buffer.toString();//StringBuffer 문자열 객체 반환
+
     }
 }
